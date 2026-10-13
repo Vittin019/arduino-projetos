@@ -1,31 +1,21 @@
-# Projetos Arduino
+# arduino-projetos
 
-Códigos organizados e revisados de projetos feitos no Arduino IDE.
+Códigos de Arduino que eu fui fazendo nas aulas e em casa.
 
-## Projetos
+Organizei em pastas pra não ficar tudo misturado.
 
-| Pasta | Descrição | Componentes principais |
-|-------|-----------|------------------------|
-| [`01-servo-potenciometro`](01-servo-potenciometro) | Controle de servo com potenciômetro (60°–120°) | Servo + Potenciômetro |
-| [`02-sensor-luz`](02-sensor-luz) | Leitura de sensor de luz digital | Sensor digital de luz |
-| [`03-sensor-noite-dia-lcd`](03-sensor-noite-dia-lcd) | Sensor dia/noite com display LCD | Sensor digital + LCD I2C |
-| [`04-dht11-lcd`](04-dht11-lcd) | Temperatura e umidade no LCD | DHT11 + LCD I2C |
-| [`05-motor-dc-potenciometro`](05-motor-dc-potenciometro) | Controle de motor DC (frente/ré) com potenciômetro | Motor DC + Driver + Pot |
-| [`06-bluetooth-leds`](06-bluetooth-leds) | Controle de 2 LEDs via Bluetooth | HC-05/HC-06 + LEDs |
-| [`07-bluetooth-leds-temp`](07-bluetooth-leds-temp) | LEDs via Bluetooth + temperatura DS18B20 | Bluetooth + DS18B20 + LEDs |
-| [`08-bluetooth-4leds-pwm`](08-bluetooth-4leds-pwm) | 4 LEDs com toggle + suporte a PWM | Bluetooth + 4 LEDs |
-| [`09-dht11-lcd-v2`](09-dht11-lcd-v2) | Versão alternativa DHT11 + LCD | DHT11 + LCD I2C |
+### o que tem aqui
 
-## Observações
+- **01-servo-potenciometro** → servo controlado por potenciômetro
+- **02-sensor-luz** → sensor de luz digital
+- **03-sensor-noite-dia-lcd** → mostra "Dia" ou "Noite" no LCD
+- **04-dht11-lcd** → temperatura e umidade no display
+- **05-motor-dc-potenciometro** → motor dc com controle de direção e velocidade
+- **06-bluetooth-leds** → controla 2 leds pelo celular via bluetooth
+- **07-bluetooth-leds-temp** → mesma coisa + sensor de temperatura
+- **08-bluetooth-4leds-pwm** → 4 leds com toggle
+- **09-dht11-lcd-v2** → outra versão do dht11 com lcd
 
-- Todos os códigos foram limpos, padronizados e corrigidos.
-- Bibliotecas usadas: `Servo`, `LiquidCrystal_I2C`, `DHT`, `OneWire`, `DallasTemperature`, `SoftwareSerial`.
-- Endereço padrão do LCD I2C: `0x27`. Se não funcionar, teste `0x3F`.
+A maioria usa LCD I2C (endereço 0x27). Se não aparecer nada, tenta 0x3F.
 
-## Como usar
-
-1. Abra a pasta do projeto desejado.
-2. Abra o arquivo `.ino` no Arduino IDE.
-3. Instale as bibliotecas necessárias (se ainda não tiver).
-4. Selecione a placa e a porta.
-5. Faça o upload.
+Bibliotecas que costumo usar: Servo, LiquidCrystal_I2C, DHT, OneWire, DallasTemperature, SoftwareSerial.
